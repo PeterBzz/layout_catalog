@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'sass:math';
 
 html {
   font-family: Roboto, serif;
@@ -20,24 +21,44 @@ body {
   align-self: center;
   margin: 0;
   padding: 50px
-    calc(50% - $card-width-total / 2 * 1 - $container-gap-horizontal / 2 * 0);
+    calc(
+      50% - math.div($card-width-total, 2) * 1 - math.div(
+          $container-gap-horizontal,
+          2
+        ) * 0
+    );
   grid-template-columns: repeat(1, 1fr);
 
   @media (min-width: 488px) {
     padding: 50px
-      calc(50% - $card-width-total / 2 * 2 - $container-gap-horizontal / 2 * 1);
+      calc(
+        50% - math.div($card-width-total, 2) * 2 - math.div(
+            $container-gap-horizontal,
+            2
+          ) * 1
+      );
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 768px) {
     padding: 50px
-      calc(50% - $card-width-total / 2 * 3 - $container-gap-horizontal / 2 * 2);
+      calc(
+        50% - math.div($card-width-total, 2) * 3 - math.div(
+            $container-gap-horizontal,
+            2
+          ) * 2
+      );
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media (min-width: 1024px) {
     padding: 50px
-      calc(50% - $card-width-total / 2 * 4 - $container-gap-horizontal / 2 * 3);
+      calc(
+        50% - math.div($card-width-total, 2) * 4 - math.div(
+            $container-gap-horizontal,
+            2
+          ) * 3
+      );
     grid-template-columns: repeat(4, 1fr);
   }
 }

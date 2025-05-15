@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'sass:math';
 
 .nav {
   display: flex;
@@ -43,7 +44,7 @@
         content: '';
         border-style: solid;
         border-radius: $nav-underline-radius;
-        border-width: calc($nav-underline-radius / 2);
+        border-width: math.div($nav-underline-radius, 2);
         position: absolute;
         top: calc($nav-link-height - $nav-underline-radius);
         left: 0;

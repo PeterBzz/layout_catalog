@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 html {
   font-family: Roboto, serif;
   font-weight: 500;
@@ -13,19 +15,29 @@ body {
 
 .container {
   display: grid;
-  padding: 50px 40px;
-  gap: 48px 46px;
+  gap: 46px $container-gap-horizontal;
+  width: auto;
+  align-self: center;
+  margin: 0;
+  padding: 50px
+    calc(50% - $card-width-total / 2 * 1 - $container-gap-horizontal / 2 * 0);
   grid-template-columns: repeat(1, 1fr);
 
   @media (min-width: 488px) {
+    padding: 50px
+      calc(50% - $card-width-total / 2 * 2 - $container-gap-horizontal / 2 * 1);
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 768px) {
+    padding: 50px
+      calc(50% - $card-width-total / 2 * 3 - $container-gap-horizontal / 2 * 2);
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media (min-width: 1024px) {
+    padding: 50px
+      calc(50% - $card-width-total / 2 * 4 - $container-gap-horizontal / 2 * 3);
     grid-template-columns: repeat(4, 1fr);
   }
 }

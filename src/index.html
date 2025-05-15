@@ -26,9 +26,9 @@
   </head>
 
   <body>
-    <header>
+    <header class="nav">
       <a
-        class="logo"
+        class="nav__logo"
         href="index.html"
       >
         <img
@@ -37,75 +37,44 @@
         />
       </a>
       <nav>
-        <ul class="nav-list">
-          <li>
+        <ul class="nav__list">
+          <li class="nav__link nav__link--first">
             <a
               href="https://google.com"
-              class="link link--first link--is-active"
+              class="is-active"
             >
               apple
             </a>
           </li>
-          <li>
-            <a
-              href="https://google.com"
-              class="link"
-            >
-              samsung
-            </a>
+          <li class="nav__link">
+            <a href="https://google.com">samsung</a>
           </li>
-          <li>
-            <a
-              href="https://google.com"
-              class="link"
-            >
-              smartphones
-            </a>
+          <li class="nav__link">
+            <a href="https://google.com">smartphones</a>
           </li>
-          <li>
+          <li class="nav__link">
             <a
               href="https://google.com"
-              class="link"
               data-qa="nav-hover"
             >
               laptops & computers
             </a>
           </li>
-          <li>
-            <a
-              href="https://google.com"
-              class="link"
-            >
-              gadgets
-            </a>
+          <li class="nav__link">
+            <a href="https://google.com">gadgets</a>
           </li>
-          <li>
-            <a
-              href="https://google.com"
-              class="link"
-            >
-              tablets
-            </a>
+          <li class="nav__link">
+            <a href="https://google.com">tablets</a>
           </li>
-          <li>
-            <a
-              href="https://google.com"
-              class="link"
-            >
-              photo
-            </a>
+          <li class="nav__link">
+            <a href="https://google.com">photo</a>
           </li>
-          <li>
-            <a
-              href="https://google.com"
-              class="link link--last"
-            >
-              video
-            </a>
+          <li class="nav__link nav__link--last">
+            <a href="https://google.com">video</a>
           </li>
         </ul>
       </nav>
-      <div class="right-margin"></div>
+      <div class="nav__right-margin"></div>
     </header>
     <main class="container">
       <div
